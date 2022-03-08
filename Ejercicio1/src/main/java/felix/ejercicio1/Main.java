@@ -25,18 +25,45 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
         System.out.println("Introduce el primer numero: ");
-        int n1 = sc.nextInt();
+        int n1 = obtenerNumero();
 
         System.out.println("Introduce el segundo numero: ");
-        int n2 = sc.nextInt();
+        int n2 = obtenerNumero();
 
         System.out.println("Introduce el tercer numero: ");
-        int n3 = sc.nextInt();
+        int n3 = obtenerNumero();
 
-        System.out.println("Los numero introducidos son: " + n1 + " " + n2 + " " + n3);
+        System.out.println("Los numeros introducidos son: " + n1 + " " + n2 + " " + n3);
+
+        calcularMayoryMenor(n1, n2, n3);
+
+    }
+
+    /**
+     * Función que devuelve el numero introducido por teclado
+     *
+     * @return n. Devuelve el numero escrito por teclado
+     */
+    private static int obtenerNumero() {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        return n;
+    }
+
+    /**
+     * Función que calcula y muestra por pantalla el menor y mayor de 3 numeros
+     * introducidos.
+     *
+     * @param n1 Primer numero
+     * @param n2 Segundo numero
+     * @param n3 Tercer numero
+     *
+     */
+    private static void calcularMayoryMenor(int n1, int n2, int n3) {
 
         //Obtenemos el numero mayor:
         int mayor = n1;
